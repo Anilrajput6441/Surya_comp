@@ -1,0 +1,152 @@
+'use client';
+
+import React, { useState } from 'react';
+import { ArrowRight, Send } from 'lucide-react';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    businessType: '',
+    goals: '',
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form Submitted:', formData);
+    alert('Form data logged to console!');
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      businessType: '',
+      goals: '',
+    });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  return (
+    <section id="contact" className="bg-[#111113] text-white py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        {/* Left Side Content */}
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-widest text-lime-400 mb-4">GET STARTED</p>
+          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-8">Ready to Start?</h2>
+          <p className="text-xl text-gray-400 mb-12">
+            Let&apos;s build your e-commerce business the <span className="text-lime-400 font-semibold italic">right way</span>.
+          </p>
+
+          <div className="space-y-8">
+            <div className="flex items-start">
+              <div className="p-3 bg-[#1A1C1E] border border-[#303335] rounded-xl mr-5">
+                <ArrowRight className="h-5 w-5 text-lime-400" />
+              </div>
+              <div>
+                <h3 className="text-xl font-light text-white">Build Strong</h3>
+                <p className="text-gray-400 font-light mt-1">Solid foundations for sustainable growth</p>
+              </div>
+            </div>
+
+            <div className="flex items-start">
+              <div className="p-3 bg-[#1A1C1E] border border-[#303335] rounded-xl mr-5">
+                <ArrowRight className="h-5 w-5 text-lime-400" />
+              </div>
+              <div>
+                <h3 className="text-xl font-light text-white">Scale Smart</h3>
+                <p className="text-gray-400 font-light mt-1">Data-driven decisions for profitable scaling</p>
+              </div>
+            </div>
+
+            <div className="flex items-start">
+              <div className="p-3 bg-[#1A1C1E] border border-[#303335] rounded-xl mr-5">
+                <ArrowRight className="h-5 w-5 text-lime-400" />
+              </div>
+              <div>
+                <h3 className="text-xl font-light text-white">Grow Consistently</h3>
+                <p className="text-gray-400 font-light mt-1">Long-term partnership for continuous growth</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side Form Card */}
+        <div className="bg-[#1A1C1E] p-10 rounded-3xl border border-[#303335] shadow-2xl">
+          <h3 className="text-3xl font-medium text-white mb-3">Contact Us Today</h3>
+          <p className="text-gray-400 mb-8 font-light">Fill out the form and we&apos;ll get back to you within 24 hours.</p>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full bg-[#111113] border border-[#303335] rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400 transition-colors"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full bg-[#111113] border border-[#303335] rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400 transition-colors"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full bg-[#111113] border border-[#303335] rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400 transition-colors"
+              />
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="businessType"
+                placeholder="Business Type (e.g., D2C Brand, Manufacturer)"
+                value={formData.businessType}
+                onChange={handleChange}
+                className="w-full bg-[#111113] border border-[#303335] rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400 transition-colors"
+              />
+            </div>
+
+            <div>
+              <textarea
+                name="goals"
+                placeholder="Tell us about your business goals..."
+                rows={4}
+                value={formData.goals}
+                onChange={handleChange}
+                className="w-full bg-[#111113] border border-[#303335] rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400 transition-colors resize-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-[#d9ff00e4] hover:bg-lime-500 text-[#111113] font-bold py-5 rounded-xl flex items-center justify-center gap-3 transition-all transform active:scale-[0.98] shadow-lg shadow-lime-400/10"
+            >
+              <Send className="h-5 w-5" />
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
