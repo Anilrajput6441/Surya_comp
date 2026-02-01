@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ArrowRight, Send } from 'lucide-react';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,17 +13,43 @@ const Contact = () => {
     goals: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
-    alert('Form data logged to console!');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      businessType: '',
-      goals: '',
-    });
+    setStatus('loading');
+
+    try {
+      // Replace with your Google Apps Script Web App URL
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyAUsuorV-LCQcjpWpT0C-i43HfSNT2WzyozjalByJqbFsC24K_yos7vb5qvbO2smupIA/exec';
+      
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Important for Google Apps Script
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      setStatus('success');
+      if(response){
+        toast.success('Message sent successfully!');
+      } 
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        businessType: '',
+        goals: '',
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('error');
+      toast.error('Failed to send message. Please try again.');
+    } finally {
+      setTimeout(() => setStatus('idle'), 3000);
+    };
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -137,10 +164,11 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full bg-[#d9ff00e4] hover:bg-lime-500 text-[#111113] font-bold py-5 rounded-xl flex items-center justify-center gap-3 transition-all transform active:scale-[0.98] shadow-lg shadow-lime-400/10"
+              disabled={status === 'loading'}
+              className="w-full bg-[#d9ff00e4] hover:bg-lime-500 disabled:bg-gray-600 text-[#111113] font-bold py-5 rounded-xl flex items-center justify-center gap-3 transition-all transform active:scale-[0.98] shadow-lg shadow-lime-400/10"
             >
-              <Send className="h-5 w-5" />
-              <span>Send Message</span>
+              <Send className={`h-5 w-5 ${status === 'loading' ? 'animate-pulse' : ''}`} />
+              <span>{status === 'loading' ? 'Sending...' : 'Send Message'}</span>
             </button>
           </form>
         </div>
