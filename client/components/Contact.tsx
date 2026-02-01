@@ -12,7 +12,6 @@ const Contact = () => {
     businessType: '',
     goals: '',
   });
-
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -21,7 +20,7 @@ const Contact = () => {
 
     try {
       // Replace with your Google Apps Script Web App URL
-      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyAUsuorV-LCQcjpWpT0C-i43HfSNT2WzyozjalByJqbFsC24K_yos7vb5qvbO2smupIA/exec';
+      const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || '';
       
       const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
