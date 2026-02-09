@@ -4,7 +4,7 @@ const Header = () => {
  
     
     <header className="fixed py-3 top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md border-b border-[#29292B]  text-white flex justify-around items-center">
-      <h1 className="flex items-center font-bold text-2xl"><span>Emergent</span><span className="text-[#DAFF00]">.</span></h1>
+      <h1 className="flex items-center font-bold text-2xl"><span>BrandingWorkz</span><span className="text-[#DAFF00]">.</span></h1>
       <nav>
         <ul className="flex space-x-8 font-light">
           <li>

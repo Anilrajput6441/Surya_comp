@@ -59,7 +59,7 @@ const WhoWeWorkWith = () => {
         <div className="bg-[#1A1C1E] p-8 rounded-2xl border border-[#303335] shadow-2xl">
           <h3 className="text-2xl font-bold text-white mb-4">Who We Work With</h3>
           <p className="text-gray-400 mb-8 text-base leading-relaxed">
-            If you&apos;re serious about building a real business, <span className="text-lime-400 font-medium">Emergent is for you</span>.
+            If you&apos;re serious about building a real business, <span className="text-lime-400 font-medium">BrandingWorkz is for you</span>.
           </p>
 
           <div className="space-y-3">

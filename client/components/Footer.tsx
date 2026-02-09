@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-6">
             <h2 className="text-2xl font-bold">
-              Emergent<span className="text-lime-400">.</span>
+              BrandingWorkz<span className="text-lime-400">.</span>
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
               Your Complete E-Commerce Growth Partner. Build, Launch, Scale with transparency and expertise.
@@ -78,7 +78,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="pt-8 border-t border-[#303335] flex flex-col md:row items-center justify-center text-center">
           <p className="text-gray-500 text-xs font-light">
-            © {currentYear} Emergent. All Rights Reserved.
+            © {currentYear} BrandingWorkz. All Rights Reserved.
           </p>
         </div>
       </div>

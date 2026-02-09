@@ -43,7 +43,7 @@ const TrustSection = () => {
             WHY CHOOSE US
           </p>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white">
-            Why Brands Trust Emergent
+            Why Brands Trust BrandingWorkz
           </h2>
           <p className="mt-4 text-lg text-gray-400">
             We act like partners, not vendors. Your success is our success.

@@ -2,6 +2,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import HowWeMake from "@/components/HowWeMake";
+import Reviews from "@/components/Reviews";
 import ServicesPage from "@/components/ServicesPage";
 import TrustEthics from "@/components/TrustEthics";
 import TrustSection from "@/components/TrustSection";
@@ -17,6 +18,7 @@ export default function Home() {
       <HowWeMake/>
       <WhoWeWorkWith/>
       <TrustEthics/>
+      <Reviews/>
       <Contact/>
       <Footer/>
 
