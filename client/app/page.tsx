@@ -11,7 +11,7 @@ import WhoWeWorkWith from "@/components/WhoWeWorkWith";
 
 export default function Home() {
   return (
-    <div className="bg-[#111113] w-full min-h-screen">
+    <div className="bg-gradient-light w-full min-h-screen">
       <Hero/>
       <TrustSection/>
       <ServicesPage/>

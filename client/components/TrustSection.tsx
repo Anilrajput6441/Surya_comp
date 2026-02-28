@@ -33,19 +33,19 @@ const TrustSection = () => {
   ];
 
   return (
-    // Main container with dark background and padding
-    <section id="why-us" className="bg-[#111113]  text-white py-20 md:py-2">
+    // Main container with light gradient background and padding
+    <section id="why-us" className="bg-white text-gray-900 py-20 md:py-2">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-lime-400 text-sm font-semibold uppercase tracking-wider mb-2">
+          <p className="text-teal-600 text-sm font-semibold uppercase tracking-wider mb-2">
             WHY CHOOSE US
           </p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
             Why Brands Trust BrandingWorkz
           </h2>
-          <p className="mt-4 text-lg text-gray-400">
+          <p className="mt-4 text-lg text-gray-900">
             We act like partners, not vendors. Your success is our success.
           </p>
         </div>
@@ -55,29 +55,29 @@ const TrustSection = () => {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="p-6 rounded-xl bg-[#1A1C1E] cursor-pointer border border-[#303335] transition duration-300 hover:border-lime-400 hover:shadow-xl hover:shadow-lime-400/20 group"
+              className="p-6 rounded-xl bg-gray-50 cursor-pointer border border-gray-300 transition duration-300 hover:border-teal-600 hover:shadow-xl hover:shadow-teal-600/20 group"
             >
               <div className="mb-4">
-                <feature.icon className="h-8 w-8 text-gray-400 transition duration-300 group-hover:text-lime-400" />
+                <feature.icon className="h-8 w-8 text-gray-900 transition duration-300 group-hover:text-teal-600" />
               </div>
-              <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
+              <h3 className="text-xl font-bold mb-2 text-gray-900">{feature.title}</h3>
+              <p className="text-gray-900">{feature.description}</p>
             </div>
           ))}
         </div>
       </div>
-      <section className="bg-[#111113] py-10 md:py-16">
+      <section className="bg-white py-10 md:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* The main card container */}
-        <div className="bg-[#1A1C1E] p-8 rounded-xl shadow-lg border border-[#303335] max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white">
+        <div className="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-300 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-900">
             
             {features.map((feature, index) => (
               <div key={index} className="flex items-start space-x-3">
-                {/* Green checkmark icon */}
-                <Check className="h-5 w-5 text-lime-400 mt-0.5 flex-shrink-0" />
-                <p className="text-gray-300">
+                {/* Teal checkmark icon */}
+                <Check className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                <p className="text-gray-900">
                   {feature.description}
                 </p>
               </div>

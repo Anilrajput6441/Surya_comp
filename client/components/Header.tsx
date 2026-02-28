@@ -3,8 +3,8 @@ const Header = () => {
   return (
  
     
-    <header className="fixed py-3 top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md border-b border-[#29292B]  text-white flex justify-around items-center">
-      <h1 className="flex items-center font-bold text-2xl"><span>BrandingWorkz</span><span className="text-[#DAFF00]">.</span></h1>
+    <header className="fixed py-3 top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 text-gray-900 flex justify-around items-center">
+      <h1 className="flex items-center font-bold text-2xl"><span>BrandingWorkz</span><span className="text-teal-600">.</span></h1>
       <nav>
         <ul className="flex space-x-8 font-light">
           <li>
@@ -22,7 +22,7 @@ const Header = () => {
         </ul>
       </nav>
       <a href="#contact">
-        <button className="bg-[#DAFF00] text-black px-8 font-semibold py-4 rounded-xl">Get Started</button>
+        <button className="bg-black text-white px-8 font-semibold py-4 rounded-xl">Get Started</button>
       </a>
     </header>
   )

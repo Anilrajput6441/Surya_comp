@@ -57,54 +57,54 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-[#111113] text-white py-24 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="bg-white text-gray-900 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         {/* Left Side Content */}
         <div>
-          <p className="text-sm font-semibold uppercase tracking-widest text-lime-400 mb-4">GET STARTED</p>
-          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-8">Ready to Start?</h2>
-          <p className="text-xl text-gray-400 mb-12">
-            Let&apos;s build your e-commerce business the <span className="text-lime-400 font-semibold italic">right way</span>.
+          <p className="text-sm font-semibold uppercase tracking-widest text-teal-600 mb-4">GET STARTED</p>
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-8">Ready to Start?</h2>
+          <p className="text-xl text-gray-900 mb-12">
+            Let&apos;s grow your business in new markets the <span className="text-teal-600 font-semibold italic">right way</span>.
           </p>
 
           <div className="space-y-8">
             <div className="flex items-start">
-              <div className="p-3 bg-[#1A1C1E] border border-[#303335] rounded-xl mr-5">
-                <ArrowRight className="h-5 w-5 text-lime-400" />
+              <div className="p-3 bg-gray-100 border border-gray-300 rounded-xl mr-5">
+                <ArrowRight className="h-5 w-5 text-teal-600" />
               </div>
               <div>
-                <h3 className="text-xl font-light text-white">Build Strong</h3>
-                <p className="text-gray-400 font-light mt-1">Solid foundations for sustainable growth</p>
+                <h3 className="text-xl font-light text-gray-900">Build Strong</h3>
+                <p className="text-gray-900 font-light mt-1">Solid foundations for sustainable growth</p>
               </div>
             </div>
 
             <div className="flex items-start">
-              <div className="p-3 bg-[#1A1C1E] border border-[#303335] rounded-xl mr-5">
-                <ArrowRight className="h-5 w-5 text-lime-400" />
+              <div className="p-3 bg-gray-100 border border-gray-300 rounded-xl mr-5">
+                <ArrowRight className="h-5 w-5 text-teal-600" />
               </div>
               <div>
-                <h3 className="text-xl font-light text-white">Scale Smart</h3>
-                <p className="text-gray-400 font-light mt-1">Data-driven decisions for profitable scaling</p>
+                <h3 className="text-xl font-light text-gray-900">Scale Smart</h3>
+                <p className="text-gray-900 font-light mt-1">Data-driven decisions for profitable scaling</p>
               </div>
             </div>
 
             <div className="flex items-start">
-              <div className="p-3 bg-[#1A1C1E] border border-[#303335] rounded-xl mr-5">
-                <ArrowRight className="h-5 w-5 text-lime-400" />
+              <div className="p-3 bg-gray-100 border border-gray-300 rounded-xl mr-5">
+                <ArrowRight className="h-5 w-5 text-teal-600" />
               </div>
               <div>
-                <h3 className="text-xl font-light text-white">Grow Consistently</h3>
-                <p className="text-gray-400 font-light mt-1">Long-term partnership for continuous growth</p>
+                <h3 className="text-xl font-light text-gray-900">Grow Consistently</h3>
+                <p className="text-gray-900 font-light mt-1">Long-term partnership for continuous growth</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Right Side Form Card */}
-        <div className="bg-[#1A1C1E] p-10 rounded-3xl border border-[#303335] shadow-2xl">
-          <h3 className="text-3xl font-medium text-white mb-3">Contact Us Today</h3>
-          <p className="text-gray-400 mb-8 font-light">Fill out the form and we&apos;ll get back to you within 24 hours.</p>
+        <div className="bg-gray-50 p-10 rounded-3xl border border-gray-300 shadow-2xl">
+          <h3 className="text-3xl font-medium text-gray-900 mb-3">Contact Us Today</h3>
+          <p className="text-gray-900 mb-8 font-light">Fill out the form and we&apos;ll get back to you within 24 hours.</p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -115,7 +115,7 @@ const Contact = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full bg-[#111113] border border-[#303335] rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400 transition-colors"
+                className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-colors"
               />
             </div>
 
@@ -127,7 +127,7 @@ const Contact = () => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full bg-[#111113] border border-[#303335] rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400 transition-colors"
+                className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-colors"
               />
               <input
                 type="tel"
@@ -135,7 +135,7 @@ const Contact = () => {
                 placeholder="Phone Number"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full bg-[#111113] border border-[#303335] rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400 transition-colors"
+                className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-colors"
               />
             </div>
 
@@ -146,7 +146,7 @@ const Contact = () => {
                 placeholder="Business Type (e.g., D2C Brand, Manufacturer)"
                 value={formData.businessType}
                 onChange={handleChange}
-                className="w-full bg-[#111113] border border-[#303335] rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400 transition-colors"
+                className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-colors"
               />
             </div>
 
@@ -157,14 +157,14 @@ const Contact = () => {
                 rows={4}
                 value={formData.goals}
                 onChange={handleChange}
-                className="w-full bg-[#111113] border border-[#303335] rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400 transition-colors resize-none"
+                className="w-full bg-white border border-gray-300 rounded-xl p-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-colors resize-none"
               />
             </div>
 
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="w-full bg-[#d9ff00e4] hover:bg-lime-500 disabled:bg-gray-600 text-[#111113] font-bold py-5 rounded-xl flex items-center justify-center gap-3 transition-all transform active:scale-[0.98] shadow-lg shadow-lime-400/10"
+              className="w-full bg-teal-600 hover:bg-teal-700 disabled:bg-gray-400 text-white font-bold py-5 rounded-xl flex items-center justify-center gap-3 transition-all transform active:scale-[0.98] shadow-lg shadow-teal-600/10"
             >
               <Send className={`h-5 w-5 ${status === 'loading' ? 'animate-pulse' : ''}`} />
               <span>{status === 'loading' ? 'Sending...' : 'Send Message'}</span>

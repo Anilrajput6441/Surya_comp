@@ -93,28 +93,28 @@ const marketplacesData: MarketplaceItem[] = [
 
 const ServicesPage: React.FC = () => {
   return (
-    <div id="services" className="min-h-screen bg-[#1A1C1E] text-white py-20 px-4 sm:px-6 lg:px-8">
+    <div id="services" className="min-h-screen bg-white text-gray-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-16">
-          <p className="text-sm font-semibold uppercase tracking-widest text-lime-400">OUR SERVICES</p>
-          <h1 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-white">
+          <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">OUR SERVICES</p>
+          <h1 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-gray-900">
             Complete E-Commerce Solutions
           </h1>
-          <p className="mt-6 max-w-3xl text-lg md:text-xl text-gray-400 mx-auto leading-relaxed">
+          <p className="mt-6 max-w-3xl text-lg md:text-xl text-gray-900 mx-auto leading-relaxed">
             From seller account creation to ads scaling, from Shopify websites to multi-marketplace expansion — we handle everything under one roof.
           </p>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {servicesData.map((service) => (
-            <div key={service.id} className="bg-[#111113] p-8 rounded-2xl border border-[#303335] flex flex-col">
+            <div key={service.id} className="bg-gray-50 p-8 rounded-2xl border border-gray-300 flex flex-col">
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-[#242729] rounded-xl mr-5">
-                  <service.icon className="h-7 w-7 text-lime-400" />
+                <div className="p-3 bg-white rounded-xl mr-5">
+                  <service.icon className="h-7 w-7 text-teal-600" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-white leading-tight">{service.name}</h2>
-                  <p className="text-gray-400 font-light">{service.description}</p>
+                  <h2 className="text-2xl font-semibold text-gray-900 leading-tight">{service.name}</h2>
+                  <p className="text-gray-900 font-light">{service.description}</p>
                 </div>
               </div>
 
@@ -123,17 +123,17 @@ const ServicesPage: React.FC = () => {
                   <ul className="space-y-4 mb-8">
                     {service.items?.map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <Check className="h-5 w-5 text-lime-400 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-300 font-light">{item}</span>
+                        <Check className="h-5 w-5 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-900 font-light">{item}</span>
                       </li>
                     ))}
                   </ul>
                 ) : null}
 
                 {service.type === 'shopify' && service.footerBanner && (
-                  <div className="mt-auto p-4 bg-[#111113] rounded-xl border border-[#303335]">
-                    <p className="text-white font-light text-center">
-                      {service.footerBanner.split('—')[0]} — <span className="text-lime-400">{service.footerBanner.split('—')[1]}</span>
+                  <div className="mt-auto p-4 bg-white rounded-xl border border-gray-300">
+                    <p className="text-gray-900 font-light text-center">
+                      {service.footerBanner.split('—')[0]} — <span className="text-teal-600">{service.footerBanner.split('—')[1]}</span>
                     </p>
                   </div>
                 )}
@@ -141,22 +141,22 @@ const ServicesPage: React.FC = () => {
                 {service.type === 'pills' && (
                   <div className="space-y-8">
                     <div>
-                      <h3 className="text-white font-light mb-4">Platforms We Manage:</h3>
+                      <h3 className="text-gray-900 font-light mb-4">Platforms We Manage:</h3>
                       <div className="flex flex-wrap gap-3">
                         {service.platforms?.map((platform, idx) => (
-                          <div key={idx} className="px-4 py-2 bg-[#1A1C1E] border border-[#303335] rounded-full font-light text-sm text-gray-300">
+                          <div key={idx} className="px-4 py-2 bg-white border border-gray-300 rounded-full font-light text-sm text-gray-900">
                             {platform}
                           </div>
                         ))}
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-white font-light mb-4">Our Strategy:</h3>
+                      <h3 className="text-gray-900 font-light mb-4">Our Strategy:</h3>
                       <ul className="space-y-3">
                         {service.strategy?.map((item, idx) => (
                           <li key={idx} className="flex items-center">
-                            <ArrowRight className="h-4 w-4 text-lime-400 mr-3 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm font-light">{item}</span>
+                            <ArrowRight className="h-4 w-4 text-teal-600 mr-3 flex-shrink-0" />
+                            <span className="text-gray-900 text-sm font-light">{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -167,9 +167,9 @@ const ServicesPage: React.FC = () => {
                 {service.type === 'marketplace' && (
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {marketplacesData.map((marketplace, index) => (
-                      <div key={index} className="bg-[#1A1C1E]/50 p-5 rounded-xl border border-[#303335]">
-                        <h3 className="font-light text-white text-lg">{marketplace.name}</h3>
-                        <p className="text-gray-400 font-light text-sm mt-2 leading-relaxed">{marketplace.description}</p>
+                      <div key={index} className="bg-white p-5 rounded-xl border border-gray-300">
+                        <h3 className="font-light text-gray-900 text-lg">{marketplace.name}</h3>
+                        <p className="text-gray-900 font-light text-sm mt-2 leading-relaxed">{marketplace.description}</p>
                       </div>
                     ))}
                   </div>

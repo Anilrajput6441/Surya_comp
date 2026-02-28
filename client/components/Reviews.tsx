@@ -97,38 +97,38 @@ const reviewData = [
 
 
 const ReviewCard = ({ review }: { review: typeof reviewData[0] }) => (
-  <div className="bg-[#1A1C1E] p-8 rounded-2xl border border-[#303335] hover:border-lime-400/30 transition-all duration-300">
+  <div className="bg-gray-50 p-8 rounded-2xl border border-gray-300 hover:border-teal-600/30 transition-all duration-300">
     <div className="flex items-center justify-between mb-6">
       <div className="flex items-center gap-4">
-        <div className="w-12 h-12 bg-lime-400/20 rounded-full flex items-center justify-center text-lime-400 font-bold">
+        <div className="w-12 h-12 bg-teal-600/20 rounded-full flex items-center justify-center text-teal-600 font-bold">
           {review.avatar}
         </div>
         <div>
-          <h3 className="text-white font-medium">{review.name}</h3>
-          <p className="text-gray-400 text-sm">{review.role} at {review.company}</p>
+          <h3 className="text-gray-900 font-medium">{review.name}</h3>
+          <p className="text-gray-900 text-sm">{review.role} at {review.company}</p>
         </div>
       </div>
       <div className="flex gap-1">
         {[...Array(5)].map((_, i) => (
           <Star 
             key={i} 
-            className={`w-5 h-5 ${i < review.rating ? 'text-lime-400 fill-current' : 'text-gray-600'}`} 
+            className={`w-5 h-5 ${i < review.rating ? 'text-teal-600 fill-current' : 'text-gray-300'}`} 
           />
         ))}
       </div>
     </div>
-    <p className="text-gray-300 leading-relaxed">{review.content}</p>
+    <p className="text-gray-900 leading-relaxed">{review.content}</p>
   </div>
 );
 
 const Reviews = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold uppercase tracking-widest text-lime-400 mb-4">TESTIMONIALS</p>
-          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">Trusted by Growing Brands</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-sm font-semibold uppercase tracking-widest text-teal-600 mb-4">TESTIMONIALS</p>
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">Trusted by Growing Brands</h2>
+          <p className="text-xl text-gray-900 max-w-3xl mx-auto">
             See what our clients say about their experience partnering with us
           </p>
         </div>
