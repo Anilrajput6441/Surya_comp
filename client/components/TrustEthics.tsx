@@ -11,7 +11,7 @@ const TrustEthics = () => {
 
   return (
     <section className="bg-gray-50 py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white p-10 md:p-12 rounded-[2rem] border border-gray-300 shadow-2xl relative overflow-hidden">
+      <div className="max-w-4xl mx-auto bg-white p-6 md:p-12 rounded-[2rem] border border-gray-300 shadow-2xl relative overflow-hidden">
         
         {/* Header Icon */}
         <div className="flex justify-center mb-8">

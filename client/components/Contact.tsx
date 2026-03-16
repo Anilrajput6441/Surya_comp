@@ -58,7 +58,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="bg-white text-gray-900 py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         
         {/* Left Side Content */}
         <div>
@@ -102,7 +102,7 @@ const Contact = () => {
         </div>
 
         {/* Right Side Form Card */}
-        <div className="bg-gray-50 p-10 rounded-3xl border border-gray-300 shadow-2xl">
+        <div className="bg-gray-50 p-6 md:p-10 rounded-3xl border border-gray-300 shadow-2xl">
           <h3 className="text-3xl font-medium text-gray-900 mb-3">Contact Us Today</h3>
           <p className="text-gray-900 mb-8 font-light">Fill out the form and we&apos;ll get back to you within 24 hours.</p>
 

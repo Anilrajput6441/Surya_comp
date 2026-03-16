@@ -133,9 +133,9 @@ const Reviews = () => {
           </p>
         </div>
         
-        <div className="flex gap-8 overflow-x-auto pb-4 scrollbar-styled">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviewData.map(review => (
-            <div key={review.id} className="flex-shrink-0  w-[350px] md:w-[400px]">
+            <div key={review.id}>
               <ReviewCard review={review} />
             </div>
           ))}

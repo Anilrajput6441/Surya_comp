@@ -24,7 +24,7 @@ const Hero = () => {
         </p>
 
         {/* Call-to-Action Buttons */}
-        <div className="flex justify-center space-x-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="#"
             className="flex items-center px-8 py-3 text-lg font-semibold rounded-lg shadow-lg bg-black text-white hover:bg-gray-800 transition duration-300"
