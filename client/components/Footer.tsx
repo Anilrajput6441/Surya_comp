@@ -78,7 +78,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="pt-8 border-t border-gray-200 flex flex-col md:row items-center justify-center text-center">
           <p className="text-gray-500 text-xs font-light">
-            © {currentYear} Lucria. All Rights Reserved.
+            © {currentYear} BrandingWorkz. All Rights Reserved.
           </p>
         </div>
       </div>
